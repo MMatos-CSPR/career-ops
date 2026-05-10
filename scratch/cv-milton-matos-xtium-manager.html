@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Milton M. Matos Reyes — CV</title>
+<style>
+  @font-face {
+    font-family: 'Space Grotesk';
+    src: url('../fonts/space-grotesk-latin.woff2') format('woff2');
+    font-weight: 300 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'DM Sans';
+    src: url('../fonts/dm-sans-latin.woff2') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #1a1a2e;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 2px 0;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a2e;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+    line-height: 1.1;
+  }
+
+  .header-gradient {
+    height: 2px;
+    background: linear-gradient(to right, hsl(187, 74%, 32%), hsl(270, 70%, 45%));
+    border-radius: 1px;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10.5px;
+    line-height: 1.4;
+    color: #555;
+  }
+
+  .contact-row a {
+    color: #555;
+    text-decoration: none;
+  }
+
+  .contact-row .separator {
+    color: #ccc;
+  }
+
+  .section {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: hsl(187, 74%, 32%);
+    border-bottom: 1.5px solid #e2e2e2;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .summary-text {
+    font-size: 11px;
+    line-height: 1.7;
+    color: #2f2f2f;
+  }
+
+  a {
+    white-space: nowrap;
+  }
+
+  .competencies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .competency-tag {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    color: hsl(187, 74%, 28%);
+    background: hsl(187, 40%, 95%);
+    padding: 4px 10px;
+    border-radius: 3px;
+    border: 1px solid hsl(187, 40%, 88%);
+  }
+
+  .job {
+    margin-bottom: 14px;
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 4px;
+  }
+
+  .job-company {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: hsl(270, 70%, 45%);
+  }
+
+  .job-period {
+    font-size: 10.5px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .job-role {
+    font-size: 11px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .job ul {
+    padding-left: 18px;
+    margin-top: 6px;
+  }
+
+  .job li {
+    font-size: 10.5px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 4px;
+  }
+
+  .job li strong {
+    font-weight: 600;
+  }
+
+  .edu-item {
+    margin-bottom: 8px;
+  }
+
+  .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .edu-title {
+    font-weight: 600;
+    font-size: 11px;
+    color: #333;
+  }
+
+  .edu-org {
+    color: hsl(270, 70%, 45%);
+    font-weight: 500;
+  }
+
+  .edu-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .cert-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .cert-title {
+    font-size: 10.5px;
+    font-weight: 500;
+    color: #333;
+  }
+
+  .cert-org {
+    color: hsl(270, 70%, 45%);
+  }
+
+  .cert-year {
+    font-size: 10px;
+    color: #777;
+    white-space: nowrap;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+  }
+
+  .skill-item {
+    font-size: 10.5px;
+    color: #444;
+  }
+
+  .skill-category {
+    font-weight: 600;
+    color: #333;
+    font-size: 10.5px;
+  }
+
+  @media print {
+    body {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+
+  .avoid-break,
+  .job,
+  .edu-item,
+  .cert-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header avoid-break">
+    <h1>Milton M. Matos Reyes</h1>
+    <div class="header-gradient"></div>
+    <div class="contact-row">
+      <span>1(787) 549-0193</span>
+      <span class="separator">|</span>
+      <span>Milton.M.Matos@Outlook.com</span>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/milton-matos/">linkedin.com/in/milton-matos/</a>
+      <span class="separator">|</span>
+      <span>Puerto Rico (Caguas/San Juan)</span>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary-text">Security Operations Manager with 10+ years of experience specializing in incident response (IR), vulnerability remediation, and operational discipline for managed services (MSP) environments. Proven track record of halving incident response times, developing comprehensive SecOps playbooks, and achieving zero-observation SOC 2 Type 2 certifications. Expert in coordinating internal teams and external MSSP/SOC partners to deliver predictable, audit-ready security outcomes.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Competencies</div>
+    <div class="competencies-grid">
+      <span class="competency-tag">SecOps & IR Coordination</span>
+      <span class="competency-tag">Vulnerability Remediation</span>
+      <span class="competency-tag">Playbook & Workflow Design</span>
+      <span class="competency-tag">MSSP/SOC Partner Management</span>
+      <span class="competency-tag">Microsoft Sentinel & EDR</span>
+      <span class="competency-tag">Audit Evidence Collection</span>
+      <span class="competency-tag">Performance Metrics (KPIs)</span>
+      <span class="competency-tag">NIST CSF & SOC 2</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+    
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Cortelco Systems</span>
+        <span class="job-period">Nov 2019 – Present</span>
+      </div>
+      <div class="job-role">Network and Security Operations Center Manager</div>
+      <ul>
+        <li><strong>Tactical Operations:</strong> Led day-to-day security operations for a high-volume MSP environment, managing alert triage, escalation workflows, and remediation follow-through.</li>
+        <li><strong>Incident Response:</strong> Reduced alert response time by 50% by developing and maintaining automated IR playbooks and refining case management procedures.</li>
+        <li><strong>Vulnerability Management:</strong> Tracked findings from penetration tests and vulnerability scans (Tenable/Rapid7) through remediation and retesting, ensuring 100% closure within SLA.</li>
+        <li><strong>Audit Readiness:</strong> Orchestrated evidence collection for SOC 2 Type 2 certification, resulting in zero observations and established defensible control narratives.</li>
+        <li><strong>Operational Discipline:</strong> Reduced manual process waste by 80% through the implementation of standardized ticketing and operating reviews.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">GM Security Technologies</span>
+        <span class="job-period">Mar 2017 – Nov 2019</span>
+      </div>
+      <div class="job-role">Senior Security Specialist</div>
+      <ul>
+        <li>Coordinated security operations audits and compliance roadmaps (PCI DSS, SOC 2) for global enterprise clients.</li>
+        <li>Managed handoffs between client technical teams and security analysts to ensure seamless incident containment and recovery.</li>
+        <li>Delivered operational security metrics and reporting to executive stakeholders to drive risk-based decision making.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span class="job-company">Cortelco Systems</span>
+        <span class="job-period">Dec 2014 – Mar 2017</span>
+      </div>
+      <div class="job-role">Information Security Consultant</div>
+      <ul>
+        <li>Deployed SIEM (McAfee) and EDR solutions, integrating endpoint telemetry and logging for real-time threat detection.</li>
+        <li>Developed device hardening standards and executed vulnerability remediation plans for strategic Caribbean accounts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Education</div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">Master of Information Security and Fraud Investigation</span>
+        <span class="edu-year">EDP University</span>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <span class="edu-title">Bachelor of Information Systems in Computer Programming</span>
+        <span class="edu-year">EDP University</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Certifications</div>
+    <div class="cert-item"><span class="cert-title">Certified Information Security Manager (CISM)</span> <span class="cert-org">ISACA</span></div>
+    <div class="cert-item"><span class="cert-title">Certified Information Systems Auditor (CISA)</span> <span class="cert-org">ISACA</span></div>
+    <div class="cert-item"><span class="cert-title">Certified Data Privacy Solutions Engineer (CDPSE)</span> <span class="cert-org">ISACA</span></div>
+    <div class="cert-item"><span class="cert-title">Security +</span> <span class="cert-org">CompTIA</span></div>
+    <div class="cert-item"><span class="cert-title">Certified Information Systems Security Professional (CISSP)</span> <span class="cert-org">In Progress</span></div>
+  </div>
+
+  <div class="section avoid-break">
+    <div class="section-title">Skills</div>
+    <div class="skills-grid">
+      <div class="skill-item"><span class="skill-category">Operations:</span> IR Playbooks, Alert Triage, Vulnerability Management, Ticketing (Jira/ServiceNow).</div>
+      <div class="skill-item"><span class="skill-category">Tools:</span> Microsoft Sentinel, CrowdStrike, SIEM, SOAR, Tenable, Rapid7, Palo Alto.</div>
+      <div class="skill-item"><span class="skill-category">Compliance:</span> NIST CSF, SOC 2 Type 2, PCI DSS, ISO 27001.</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
